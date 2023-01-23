@@ -1,11 +1,12 @@
 import * as React from 'react';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import PhoneIcon from '@mui/icons-material/Phone';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import PersonPinIcon from '@mui/icons-material/PersonPin';
+import { IconButton, Tabs, Tab } from '@mui/material';
+import PersonIcon from '@mui/icons-material/Person';
 
-export default function IconLabelTabs() {
+import WorkIcon from '@mui/icons-material/Work';
+import LaptopMacIcon from '@mui/icons-material/LaptopMac';
+import ContactPageIcon from '@mui/icons-material/ContactPage';
+
+export default function NavTabs() {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -13,10 +14,17 @@ export default function IconLabelTabs() {
   };
 
   return (
-    <Tabs value={value} onChange={handleChange} aria-label="icon label tabs example">
-      <Tab icon={<PhoneIcon />} label="RECENTS" />
-      <Tab icon={<FavoriteIcon />} label="FAVORITES" />
-      <Tab icon={<PersonPinIcon />} label="NEARBY" />
+    <Tabs
+      value={value}
+      onChange={handleChange}
+      aria-label='icon label tabs example'
+      indicatorColor='secondary'
+      textColor='secondary'
+    >
+      <Tab icon={<PersonIcon />} label='About' />
+      <Tab icon={<WorkIcon />} label='Experience' />
+      <Tab icon={<LaptopMacIcon />} label='Projects' />
+      <Tab icon={<ContactPageIcon />} label='Contact' />
     </Tabs>
   );
 }
