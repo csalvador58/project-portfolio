@@ -10,16 +10,20 @@ import MenuIcon from '@mui/icons-material/Menu';
 export default function Navbar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed" color="transparent">
+      <AppBar
+        position='fixed'
+        color='transparent'
+        sx={{ backdropFilter: 'blur(10px)' }}
+      >
         <Toolbar>
-          <Typography variant="h8" component="div" sx={{ flexGrow: 1 }}>
+          <Typography variant='h8' component='div' paddingLeft='1.5rem' sx={{ flexGrow: 1 }}>
             CHRIS SALVADOR
           </Typography>
           <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
+            size='large'
+            edge='start'
+            color='inherit'
+            aria-label='menu'
             sx={{ mr: 2 }}
           >
             <MenuIcon />

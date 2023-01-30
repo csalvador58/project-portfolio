@@ -1,14 +1,23 @@
 import * as React from 'react';
-import {Box, Card, CardActions} from '@mui/material/';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import { flexbox } from '@mui/system';
+import {
+  Border,
+  Box,
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Paper,
+  Typography,
+} from '@mui/material/';
 
 export default function ProjectCard() {
   return (
-    <Card sx={({ maxWidth: 345 }, { background: 'black' })}>
+    <Card
+      // variant='outlined'
+      style={{ border: "1px solid white"}}
+      sx={({ maxWidth: 345 }, { background: 'black' })}
+    >
       <CardMedia
         sx={{ height: 50 }}
         image='/static/images/cards/contemplative-reptile.jpg'
@@ -30,8 +39,8 @@ export default function ProjectCard() {
         </Typography>
       </CardContent>
       <CardActions>
-          <Button size='small'>Share</Button>
-          <Button size='small'>Learn More</Button>
+        <Button size='small'>Share</Button>
+        <Button size='small'>Learn More</Button>
       </CardActions>
     </Card>
   );

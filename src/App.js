@@ -31,25 +31,20 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       {/* <CssBaseline /> */}
-      <Grid container direction='column' position='absolute' top='65px'>
+      <Grid container direction='column' position='absolute' top='8rem'>
         <Grid item>
           <NavBar />
-          {/* <Header /> */}
         </Grid>
-        <Grid item>{/* <Hero /> */}</Grid>
         <Grid item>
-          <Typography variant='h6' component='h6' align='center'>
-            ABOUT
-          </Typography>
           <Box display='flex' justifyContent='center'>
             <Avatar
               alt='Chris Salvador'
               src={ProfilePic}
-              sx={{ width: 100, height: 100 }}
+              sx={{ width: 150, height: 150 }}
             />
           </Box>
 
-          <Typography variant='h5' component='h2'>
+          <Typography variant='h5' component='p' padding='4rem 2rem'>
             Quisque commodo facilisis tellus. Integer sodales lorem sed nisl.
             Morbi consectetuer mauris quis odio. Ut dolor lorem, viverra vitae,
             viverra eu, euismod nec, enim. Lorem ipsum dolor sit amet,
@@ -63,50 +58,59 @@ export default function App() {
               component='h6'
               color='white'
               align='center'
+              padding='4rem 0'
             >
               PROJECTS
             </Typography>
-            <Grid container spacing={1}>
-              <Grid item xs={10}>
+            <Grid container spacing={1} padding='0 2rem'>
+              <Grid item xs={12}>
                 <ProjectCard></ProjectCard>
                 <Typography
                   variant='body2'
                   component='div'
                   color='white'
                   align='center'
+                  paddingTop='1rem'
+                  paddingBottom='2rem'
                 >
                   Project
                 </Typography>
               </Grid>
-              <Grid item xs={10}>
+              <Grid item xs={12}>
                 <ProjectCard></ProjectCard>
                 <Typography
                   variant='body2'
                   component='div'
                   color='white'
                   align='center'
+                  paddingTop='1rem'
+                  paddingBottom='2rem'
                 >
                   Project
                 </Typography>
               </Grid>
-              <Grid item xs={10}>
+              <Grid item xs={12}>
                 <ProjectCard></ProjectCard>
                 <Typography
                   variant='body2'
                   component='div'
                   color='white'
                   align='center'
+                  paddingTop='1rem'
+                  paddingBottom='2rem'
                 >
                   Project
                 </Typography>
               </Grid>
-              <Grid item xs={10}>
+              <Grid item xs={12}>
                 <ProjectCard></ProjectCard>
                 <Typography
                   variant='body2'
                   component='div'
                   color='white'
                   align='center'
+                  paddingTop='1rem'
+                  paddingBottom='2rem'
                 >
                   Project
                 </Typography>
@@ -115,10 +119,15 @@ export default function App() {
           </Paper>
         </Grid>
         <Grid item>
-          <Typography variant='h6' component='h6' align='center'>
+          <Typography
+            variant='h6'
+            component='h6'
+            align='center'
+            paddingTop='4rem'
+          >
             EXPERIENCE
           </Typography>
-          <Typography variant='h6' component='body'>
+          <Typography variant='h6' component='p' padding='2rem'>
             Quisque commodo facilisis tellus. Integer sodales lorem sed nisl.
             Morbi consectetuer mauris quis odio. Ut dolor lorem, viverra vitae,
             viverra eu, euismod nec, enim. Lorem ipsum dolor sit amet,
@@ -132,10 +141,11 @@ export default function App() {
               component='h6'
               color='white'
               align='center'
+              paddingTop='4rem'
             >
               CONTACT
             </Typography>
-            <Typography variant='h6' component='body' color='white'>
+            <Typography variant='h6' component='p' color='white' padding='2rem'>
               Quisque commodo facilisis tellus. Integer sodales lorem sed nisl.
               Morbi consectetuer mauris quis odio. Ut dolor lorem, viverra
               vitae, viverra eu, euismod nec, enim. Lorem ipsum dolor sit amet,
