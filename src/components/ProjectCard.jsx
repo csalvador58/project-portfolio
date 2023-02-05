@@ -31,11 +31,10 @@ export default function ProjectCard() {
           color='white'
           align='center'
         >
-          Lizard
+          Lorem ipsum
         </Typography>
         <Typography variant='body2' color='white' align='center'>
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius repellat quia quas eum culpa suscipit quisquam, blanditiis beatae dolores cumque eos distinctio illo! Vel modi iure exercitationem earum officiis iusto.
         </Typography>
       </CardContent>
       <CardActions>

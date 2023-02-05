@@ -1,4 +1,4 @@
-import React, {forwardRef, useRef} from 'react';
+import React, { forwardRef, useRef } from 'react';
 import './App.css';
 import {
   createTheme,
@@ -11,12 +11,12 @@ import {
 import Hero from '../src/layout/Hero';
 import NavBar from './layout/NavBar';
 
-
 import HeroText from './layout/HeroText';
 import Projects from './layout/Projects';
 import Experience from './layout/Experience';
 import Contacts from './layout/Contacts';
 import RefMarker from './components/RefMarker';
+import { EditNotifications } from '@mui/icons-material';
 // import Hero from './UI/Hero';
 // import { dark } from '@mui/material/styles/createPalette';
 
@@ -27,7 +27,8 @@ const App = () => {
   const contactRef = useRef();
 
   const handleAboutClick = () => {
-    aboutRef.current.scrollIntoView({ behavior: 'smooth' });
+    // aboutRef.current.scrollIntoView({ behavior: 'smooth' });
+    aboutRef.current.scrollIntoView({ block: 'end', behavior: 'smooth' });
   };
   const handleProjectsClick = () => {
     projectsRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -55,29 +56,33 @@ const App = () => {
       {/* <CssBaseline /> */}
       <Grid container direction='column' position='absolute' top='4rem'>
         <Grid item>
-          <NavBar handleAboutClick={handleAboutClick} handleProjectsClick={handleProjectsClick} handleExperienceClick={handleExperienceClick} handleContactClick={handleContactClick}/>
+          <NavBar
+            handleAboutClick={handleAboutClick}
+            handleProjectsClick={handleProjectsClick}
+            handleExperienceClick={handleExperienceClick}
+            handleContactClick={handleContactClick}
+          />
         </Grid>
         <Grid item>
-          <RefMarker reference={aboutRef}/>
+          <RefMarker reference={aboutRef} />
           <Hero />
-          <HeroText />
+          <HeroText reference={projectsRef}/>
         </Grid>
         <Grid item>
-        <RefMarker reference={projectsRef}/>
           <Projects />
         </Grid>
         <Grid item>
-        <RefMarker reference={experienceRef}/>
+          <RefMarker reference={experienceRef} />
           <Experience />
         </Grid>
         <Grid item>
-        <RefMarker reference={contactRef}/>
+          <RefMarker reference={contactRef} />
           <Contacts />
         </Grid>
       </Grid>
       {/* <NavBar /> */}
     </ThemeProvider>
   );
-}
+};
 
 export default App;
