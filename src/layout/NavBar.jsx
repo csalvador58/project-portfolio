@@ -11,19 +11,24 @@ export default function Navbar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
-        position='fixed'
         color='transparent'
+        position='fixed'
         sx={{ backdropFilter: 'blur(10px)' }}
       >
         <Toolbar>
-          <Typography variant='h8' component='div' paddingLeft='1.5rem' sx={{ flexGrow: 1 }}>
+          <Typography
+            paddingLeft={2}
+            variant='h8'
+            component='div'
+            sx={{ flexGrow: 1 }}
+          >
             SALVADOR
           </Typography>
           <IconButton
-            size='large'
-            edge='start'
-            color='inherit'
             aria-label='menu'
+            color='inherit'
+            edge='start'
+            size='large'
             sx={{ mr: 2 }}
           >
             <MenuIcon />
