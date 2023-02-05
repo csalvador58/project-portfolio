@@ -19,7 +19,7 @@ export default function Experience() {
       >
         EXPERIENCE
       </Typography>
-      <Typography fontWeight='light' variant='h6' component='p' paddingX={{ xs: '2rem', sm: '4rem'}}>
+      <Typography fontWeight='light' variant='h6' component='p' paddingx={{ xs: '2rem', sm: '4rem'}}>
         I've been fortunate to work at several global companies each a leader in its respective technology sector - Healthcare, FinTech, and Consumer audience measurement. 
       </Typography>
       <List sx={{padding: '3rem'}}>
