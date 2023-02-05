@@ -17,7 +17,7 @@ export default function Navbar() {
       >
         <Toolbar>
           <Typography variant='h8' component='div' paddingLeft='1.5rem' sx={{ flexGrow: 1 }}>
-            CHRIS SALVADOR
+            SALVADOR
           </Typography>
           <IconButton
             size='large'
