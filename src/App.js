@@ -1,24 +1,17 @@
-import React, { forwardRef, useRef } from 'react';
+import React, { useRef } from 'react';
 import './App.css';
 import {
   createTheme,
   Grid,
-  IconButton,
-  Paper,
   ThemeProvider,
-  Typography,
 } from '@mui/material';
 import Hero from '../src/layout/Hero';
 import NavBar from './layout/NavBar';
-
 import HeroText from './layout/HeroText';
 import Projects from './layout/Projects';
 import Experience from './layout/Experience';
 import Contacts from './layout/Contacts';
 import RefMarker from './components/RefMarker';
-import { EditNotifications } from '@mui/icons-material';
-// import Hero from './UI/Hero';
-// import { dark } from '@mui/material/styles/createPalette';
 
 const App = () => {
   const aboutRef = useRef();
@@ -27,17 +20,21 @@ const App = () => {
   const contactRef = useRef();
 
   const handleAboutClick = () => {
-    // aboutRef.current.scrollIntoView({ behavior: 'smooth' });
-    aboutRef.current.scrollIntoView({ block: 'end', behavior: 'smooth' });
+    const offset = aboutRef.current.offsetTop;
+    window.scroll({ top: offset, left: 0, behavior: 'smooth' });
   };
   const handleProjectsClick = () => {
-    projectsRef.current.scrollIntoView({ behavior: 'smooth' });
+    const offset = projectsRef.current.offsetTop;
+    window.scroll({ top: offset+25, left: 0, behavior: 'smooth' });
   };
   const handleExperienceClick = () => {
-    experienceRef.current.scrollIntoView({ behavior: 'smooth' });
+    const offset = experienceRef.current.offsetTop;
+    console.log(offset)
+    window.scroll({ top: offset+25, left: 0, behavior: 'smooth' });
   };
   const handleContactClick = () => {
-    contactRef.current.scrollIntoView({ behavior: 'smooth' });
+    const offset = contactRef.current.offsetTop;
+    window.scroll({ top: offset, left: 0, behavior: 'smooth' });
   };
 
   const theme = createTheme({
@@ -53,7 +50,6 @@ const App = () => {
   });
   return (
     <ThemeProvider theme={theme}>
-      {/* <CssBaseline /> */}
       <Grid container direction='column' position='absolute' top='4rem'>
         <Grid item>
           <NavBar
@@ -66,9 +62,10 @@ const App = () => {
         <Grid item>
           <RefMarker reference={aboutRef} />
           <Hero />
-          <HeroText reference={projectsRef}/>
+          <HeroText />
         </Grid>
         <Grid item>
+          <RefMarker reference={projectsRef} />
           <Projects />
         </Grid>
         <Grid item>
@@ -80,7 +77,6 @@ const App = () => {
           <Contacts />
         </Grid>
       </Grid>
-      {/* <NavBar /> */}
     </ThemeProvider>
   );
 };

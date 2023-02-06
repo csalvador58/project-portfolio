@@ -49,7 +49,6 @@ export default function ToggleColorMode() {
     }),
     []
   );
-
   const theme = React.useMemo(
     () =>
       createTheme({

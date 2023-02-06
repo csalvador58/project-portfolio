@@ -1,8 +1,7 @@
 import React from 'react';
 import { Typography } from '@mui/material';
-import RefMarker from '../components/RefMarker';
 
-export default function HeroText({reference}) {
+export default function HeroText() {
     
   return (
     <>
@@ -17,7 +16,6 @@ export default function HeroText({reference}) {
         and Finance are the industries that I previously worked in and believe
         to have the greatest benefit to utilize Web3 technology. I'm open to
         connect with anyone who is along the same dev journey or interests.
-      <RefMarker reference={reference} />
       </Typography>
     </>
   );

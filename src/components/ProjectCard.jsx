@@ -1,20 +1,16 @@
-import * as React from 'react';
+import React from 'react';
 import {
-  Border,
-  Box,
   Button,
   Card,
   CardActions,
   CardContent,
   CardMedia,
-  Paper,
   Typography,
 } from '@mui/material/';
 
 export default function ProjectCard() {
   return (
     <Card
-      // variant='outlined'
       style={{ border: "1px solid white"}}
       sx={({ maxWidth: 345 }, { background: 'black' })}
     >
