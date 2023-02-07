@@ -6,7 +6,7 @@ import ProfilePic from '../images/Salvador.jpg';
 export default function Hero() {
   return (
     <>
-      <Box display='flex' justifyContent='center' padding={5}>
+      <Box mt='5rem' display='flex' justifyContent='center' padding={5}>
         <Avatar
           alt='Chris Salvador, MSF'
           src={ProfilePic}

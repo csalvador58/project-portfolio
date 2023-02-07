@@ -14,8 +14,8 @@ export default function Projects() {
       >
         PROJECTS
       </Typography>
-      <Grid container spacing={1} padding='0 2rem'>
-        <Grid item xs={12}>
+      <Grid container spacing={2} padding='0 2rem' columns={12}>
+        <Grid item xs={12} sm={6} md={4} lg={4} xl={3}>
           <ProjectCard></ProjectCard>
           <Typography
             variant='body2'
@@ -28,7 +28,7 @@ export default function Projects() {
             Project
           </Typography>
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={12} sm={6} md={4} lg={4} xl={3}>
           <ProjectCard></ProjectCard>
           <Typography
             variant='body2'
@@ -41,7 +41,7 @@ export default function Projects() {
             Project
           </Typography>
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={12} sm={6} md={4} lg={4} xl={3}>
           <ProjectCard></ProjectCard>
           <Typography
             variant='body2'
@@ -54,7 +54,7 @@ export default function Projects() {
             Project
           </Typography>
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={12} sm={6} md={4} lg={4} xl={3}>
           <ProjectCard></ProjectCard>
           <Typography
             variant='body2'

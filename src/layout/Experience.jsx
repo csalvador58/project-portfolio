@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  Box,
   Divider,
   Link,
   List,
@@ -10,21 +11,32 @@ import {
 
 export default function Experience() {
   return (
-    <>
-      <Typography
-        variant='h6'
-        component='h6'
-        align='center'
-        padding='3rem 0'
-      >
+    <Box textAlign={{ xl: 'center' }}>
+      <Typography variant='h6' component='h6' align='center' padding='3rem 0'>
         EXPERIENCE
       </Typography>
-      <Typography fontWeight='light' variant='h6' component='p' paddingX={{ xs: '2rem', sm: '4rem'}}>
-        My 15+ years of experience includes working at several global companies each a leader in its respective technology sector - Healthcare, FinTech, and Consumer audience measurement. 
+      <Typography
+        fontWeight='light'
+        variant='body1'
+        component='p'
+        pb='2rem'
+        paddingX={{ xs: '2rem', sm: '4rem', md: '6rem', xl: '8rem' }}
+      >
+        In 2022, I decided to train a superhero power that I've long kept inside since programming 68HC11 micro-controllers in C over a decade ago.  My passion for this power to develop software allows me to express my creativity and allow my curiosity to wander while building fun applications. I've taken the self-taught learning path and joined many Web2 and Web3 communities. I'm also enrolled at a Javascript Full-stack developer program locally in my area.<br/><br/> 
+        
+        In the 15+ years of my superhero career, I was fortunate to help save the world in different environments that included Healthcare, FinTech, and Media measurement. I was mentored to always keep an open mind and this career approach has challenged me to learn various superhero powers that I never expected to possess. As a lifelong learner, my trainings also include a M.S. Finance and a B.S. Electronic Engineering Tech degrees.
       </Typography>
-      <List sx={{padding: '3rem'}}>
-        <ListItem alignItems='flex-start'>
+      <List
+        sx={{
+          marginX: 'auto',
+          maxWidth: '480px',
+          pb: '3rem',
+          paddingX: { xs: '3rem', sm: '5rem', md: '7rem', xl: '10rem' },
+        }}
+      >
+        <ListItem>
           <ListItemText
+            align='center'
             primary='Field Engineer II - Medical Imaging Systems'
             secondary={
               <React.Fragment>
@@ -45,8 +57,9 @@ export default function Experience() {
           />
         </ListItem>
         <Divider variant='middle' component='li' />
-        <ListItem alignItems='flex-start'>
+        <ListItem>
           <ListItemText
+            align='center'
             primary='Sr Fund Accountant - Hedge Funds'
             secondary={
               <React.Fragment>
@@ -70,8 +83,9 @@ export default function Experience() {
           />
         </ListItem>
         <Divider variant='middle' component='li' />
-        <ListItem alignItems='flex-start'>
+        <ListItem>
           <ListItemText
+            align='center'
             primary='Quality Analyst'
             secondary={
               <React.Fragment>
@@ -92,6 +106,6 @@ export default function Experience() {
           />
         </ListItem>
       </List>
-    </>
+    </Box>
   );
 }

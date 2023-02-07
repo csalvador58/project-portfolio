@@ -23,7 +23,8 @@ export default function Contacts() {
         padding='0 2rem'
         align='center'
       >
-        #KeepPushing #NeverStopLearning
+        #KeepPushing #NeverStopLearning<br/> 
+        #TheRewardIsTheJourney
       </Typography>
       <Grid container p={3} justifyContent='center' alignItems='center'>
         <IconButton

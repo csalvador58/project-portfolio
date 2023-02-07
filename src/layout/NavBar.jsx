@@ -1,4 +1,4 @@
-import React, { forwardRef, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import {
   AppBar,
   Box,
@@ -7,7 +7,6 @@ import {
   Toolbar,
   Typography,
 } from '@mui/material';
-import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 
 const Navbar = ({
@@ -26,7 +25,7 @@ const Navbar = ({
     // handleMobileMenuClose();
   };
 
-  const menuId = 'primary-search-account-menu';
+  const menuId = 'primary-menu';
   const renderMenu = (
     <Menu
       anchorEl={anchorEl}
@@ -55,7 +54,8 @@ const Navbar = ({
       <AppBar
         color='transparent'
         position='fixed'
-        sx={{ backdropFilter: 'blur(10px)' }}
+        
+        sx={{ backdropFilter: 'blur(10px)'}}
       >
         <Toolbar>
           <Typography

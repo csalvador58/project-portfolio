@@ -5,7 +5,7 @@ import {
   Grid,
   ThemeProvider,
 } from '@mui/material';
-import Hero from '../src/layout/Hero';
+import Hero from './layout/Hero';
 import NavBar from './layout/NavBar';
 import HeroText from './layout/HeroText';
 import Projects from './layout/Projects';
@@ -25,12 +25,12 @@ const App = () => {
   };
   const handleProjectsClick = () => {
     const offset = projectsRef.current.offsetTop;
-    window.scroll({ top: offset+25, left: 0, behavior: 'smooth' });
+    window.scroll({ top: offset-25, left: 0, behavior: 'smooth' });
   };
   const handleExperienceClick = () => {
     const offset = experienceRef.current.offsetTop;
-    console.log(offset)
-    window.scroll({ top: offset+25, left: 0, behavior: 'smooth' });
+    // console.log(offset)
+    window.scroll({ top: offset, left: 0, behavior: 'smooth' });
   };
   const handleContactClick = () => {
     const offset = contactRef.current.offsetTop;
@@ -50,7 +50,7 @@ const App = () => {
   });
   return (
     <ThemeProvider theme={theme}>
-      <Grid container direction='column' position='absolute' top='4rem'>
+      <Grid container direction='column'>
         <Grid item>
           <NavBar
             handleAboutClick={handleAboutClick}
