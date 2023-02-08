@@ -7,18 +7,22 @@ import {
   CardMedia,
   Typography,
 } from '@mui/material/';
+import project01Img from '../projects/odinLandingPage/projectImages/project01Preview.png';
 
-export default function ProjectCard() {
+export default function ProjectCard({
+  image,
+  imageAlt,
+  title,
+  name,
+  description,
+  url,
+}) {
   return (
     <Card
-      style={{ border: "1px solid white"}}
+      style={{ border: '1px solid white' }}
       sx={({ maxWidth: 345 }, { background: 'black' })}
     >
-      <CardMedia
-        sx={{ height: 50 }}
-        image='/static/images/cards/contemplative-reptile.jpg'
-        title='green iguana'
-      />
+      <CardMedia sx={{ height: '100%', objectFit: 'contain'}} component='img' image={project01Img} title={imageAlt} />
       <CardContent>
         <Typography
           gutterBottom
@@ -27,15 +31,16 @@ export default function ProjectCard() {
           color='white'
           align='center'
         >
-          Lorem ipsum
+          {name}
         </Typography>
         <Typography variant='body2' color='white' align='center'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius repellat quia quas eum culpa suscipit quisquam, blanditiis beatae dolores cumque eos distinctio illo! Vel modi iure exercitationem earum officiis iusto.
+          {description}
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size='small'>Share</Button>
-        <Button size='small'>Learn More</Button>
+        <Button href={url} target='_blank' size='small'>
+          Learn More
+        </Button>
       </CardActions>
     </Card>
   );
