@@ -22,9 +22,19 @@ export default function Experience() {
         pb='2rem'
         paddingX={{ xs: '2rem', sm: '4rem', md: '6rem', xl: '8rem' }}
       >
-        In 2022, I decided to a pursue a passion that I've long kept inside since programming 68HC11 micro-controllers in C over a decade ago.  My passion to develop software allows me to express my creativity and allow my curiosity to wander while building fun applications. I've taken the self-taught learning path and joined many Web2 and Web3 communities. I'm also enrolled at a Javascript Full-stack developer program locally in my area.<br/><br/> 
-        
-        In the 15+ years of my working career, I was fortunate to contribute in various industries that included Healthcare, FinTech, and Media measurement.  As a lifelong learner, my trainings also include a M.S. Finance and a B.S. Electronic Engineering Tech degrees.
+        In 2022, I decided to a pursue a passion that I've long kept inside
+        since programming 68HC11 micro-controllers in C over a decade ago. My
+        passion to develop software allows me to express my creativity and allow
+        my curiosity to wander while building fun applications. I've taken the
+        self-taught learning path and joined many Web2 and Web3 communities. I'm
+        also enrolled at a Javascript Full-stack developer program locally in my
+        area.
+        <br />
+        <br />
+        In the 15+ years of my working career, I was fortunate to contribute in
+        various industries that included Healthcare, FinTech, and Media
+        measurement. As a lifelong learner, my trainings also include a M.S.
+        Finance and a B.S. Electronic Engineering Tech degrees.
       </Typography>
       <List
         sx={{
@@ -36,7 +46,10 @@ export default function Experience() {
       >
         <ListItem>
           <ListItemText
-            align='center'
+            sx={{
+              textAlign: 'center',
+            }}
+            // align='center'
             primary='Field Engineer II - Medical Imaging Systems'
             secondary={
               <React.Fragment>
@@ -59,7 +72,10 @@ export default function Experience() {
         <Divider variant='middle' component='li' />
         <ListItem>
           <ListItemText
-            align='center'
+            sx={{
+              textAlign: 'center',
+            }}
+            // align='center'
             primary='Sr Fund Accountant - Hedge Funds'
             secondary={
               <React.Fragment>
@@ -85,7 +101,10 @@ export default function Experience() {
         <Divider variant='middle' component='li' />
         <ListItem>
           <ListItemText
-            align='center'
+            sx={{
+              textAlign: 'center',
+            }}
+            // align='center'
             primary='Quality Analyst - Field Operations'
             secondary={
               <React.Fragment>

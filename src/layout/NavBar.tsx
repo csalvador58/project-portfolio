@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { FC, MouseEvent, useState } from 'react';
 import {
   AppBar,
   Box,
@@ -9,15 +9,22 @@ import {
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 
-const Navbar = ({
+interface NavBarProps {
+  handleAboutClick: () => void;
+  handleProjectsClick: () => void;
+  handleExperienceClick: () => void;
+  handleContactClick: () => void;
+}
+
+const Navbar: FC<NavBarProps> = ({
   handleAboutClick,
   handleProjectsClick,
   handleExperienceClick,
   handleContactClick,
 }) => {
-  const [anchorEl, setAnchorEl] = useState(null);
+  const [anchorEl, setAnchorEl] = useState<SVGSVGElement | null>(null);
   const isMenuOpen = Boolean(anchorEl);
-  const handleProfileMenuOpen = (event) => {
+  const handleProfileMenuOpen = (event: MouseEvent<SVGSVGElement>) => {
     setAnchorEl(event.currentTarget);
   };
   const handleMenuClose = () => {
@@ -60,9 +67,13 @@ const Navbar = ({
         <Toolbar>
           <Typography
             paddingLeft={2}
-            variant='h8'
+            // variant='h8'
             component='div'
-            sx={{ flexGrow: 1 }}
+            sx={{ 
+              flexGrow: 1,
+              fontSize: "2rem", // Custom font size for "h8"
+              fontWeight: "bold", // Custom font weight for "h8" 
+            }}
           >
             SALVADOR
           </Typography>

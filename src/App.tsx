@@ -13,11 +13,15 @@ import Experience from './layout/Experience';
 import Contacts from './layout/Contacts';
 import RefMarker from './components/RefMarker';
 
+interface initOffsetTop {
+  offsetTop: number,
+}
+
 const App = () => {
-  const aboutRef = useRef();
-  const projectsRef = useRef();
-  const experienceRef = useRef();
-  const contactRef = useRef();
+  const aboutRef = useRef<initOffsetTop>({offsetTop: 0});
+  const projectsRef = useRef<initOffsetTop>({offsetTop: 0});
+  const experienceRef = useRef<initOffsetTop>({offsetTop: 0});
+  const contactRef = useRef<initOffsetTop>({offsetTop: 0});
 
   const handleAboutClick = () => {
     const offset = aboutRef.current.offsetTop;
