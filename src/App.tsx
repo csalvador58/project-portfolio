@@ -1,35 +1,84 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useRef } from 'react';
+import './App.css';
+import {
+  createTheme,
+  Grid,
+  ThemeProvider,
+} from '@mui/material';
+import Hero from './layout/Hero';
+import NavBar from './layout/NavBar';
+import HeroText from './layout/HeroText';
+import Projects from './layout/Projects';
+import Experience from './layout/Experience';
+import Contacts from './layout/Contacts';
+import RefMarker from './components/RefMarker';
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const aboutRef = useRef();
+  const projectsRef = useRef();
+  const experienceRef = useRef();
+  const contactRef = useRef();
 
+  const handleAboutClick = () => {
+    const offset = aboutRef.current.offsetTop;
+    window.scroll({ top: offset, left: 0, behavior: 'smooth' });
+  };
+  const handleProjectsClick = () => {
+    const offset = projectsRef.current.offsetTop;
+    window.scroll({ top: offset-25, left: 0, behavior: 'smooth' });
+  };
+  const handleExperienceClick = () => {
+    const offset = experienceRef.current.offsetTop;
+    // console.log(offset)
+    window.scroll({ top: offset, left: 0, behavior: 'smooth' });
+  };
+  const handleContactClick = () => {
+    const offset = contactRef.current.offsetTop;
+    window.scroll({ top: offset, left: 0, behavior: 'smooth' });
+  };
+
+  const theme = createTheme({
+    palette: {
+      mode: 'light',
+      // primary: {
+      // main: '#030406'
+      // },
+      // secondary: {
+      // main: '#f50057'
+      // },
+    },
+  });
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <ThemeProvider theme={theme}>
+      <Grid container direction='column'>
+        <Grid item>
+          <NavBar
+            handleAboutClick={handleAboutClick}
+            handleProjectsClick={handleProjectsClick}
+            handleExperienceClick={handleExperienceClick}
+            handleContactClick={handleContactClick}
+          />
+        </Grid>
+        <Grid item>
+          <RefMarker reference={aboutRef} />
+          <Hero />
+          <HeroText />
+        </Grid>
+        <Grid item>
+          <RefMarker reference={projectsRef} />
+          <Projects />
+        </Grid>
+        <Grid item>
+          <RefMarker reference={experienceRef} />
+          <Experience />
+        </Grid>
+        <Grid item>
+          <RefMarker reference={contactRef} />
+          <Contacts />
+        </Grid>
+      </Grid>
+    </ThemeProvider>
+  );
+};
 
-export default App
+export default App;
