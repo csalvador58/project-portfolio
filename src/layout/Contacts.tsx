@@ -28,7 +28,7 @@ export default function Contacts() {
       <Grid container p={3} justifyContent='center' alignItems='center'>
         <IconButton
           aria-label='LinkedIn'
-          href='https://www.linkedin.com/csalvador58'
+          href='https://www.linkedin.com/in/csalvador58'
           target='_blank'
         >
           <LinkedInIcon sx={{ color: 'white' }} fontSize='large' />

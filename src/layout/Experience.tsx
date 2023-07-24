@@ -27,7 +27,7 @@ export default function Experience() {
         paddingX={{ xs: '2rem', sm: '4rem', md: '6rem', xl: '8rem' }}
       >
         Throughout my 15+ years of professional experience, I was fortunate to
-        work in a diverse set industries including Healthcare, FinTech, and
+        work in a diverse set of industries including Healthcare, FinTech, and
         Consumer Media research. In addition to my work experience, I hold
         both a M.S. in Finance and a B.S. in Electronic Engineering Tech degrees.
       </Typography>
