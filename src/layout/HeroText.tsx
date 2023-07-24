@@ -13,7 +13,7 @@ export default function HeroText() {
       >
         In 2022, I finally decided to pursue a long-held passion for coding that
         originated during a time I learned to program 68HC11 micro-controllers.
-        Web3 played a major inspiration as I found the blockchain and
+        Web3 played a major inspiration as I found blockchain and
         cryptography to be fascinating emerging technologies. In my dev journey,
         I embraced the path of self-taught developers as well as learning from
         many Web2 and Web3 communities. In June 2023, I completed my
@@ -34,7 +34,7 @@ export default function HeroText() {
         , you can find me actively building with the Web3 communities like
         Alchemy, Encode, and ETHGlobal. While I have a strong preference for
         backend and databases, I also enjoy working on the frontend. Currently
-        I've been studying by Zero-Knowledge proofs and the possible uses in
+        I've been studying Zero-Knowledge proofs and the possible uses in
         Healthcare. Feel free to connect with me if you're along the same dev
         journey or interests.
       </Typography>

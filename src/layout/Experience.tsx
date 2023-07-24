@@ -28,8 +28,8 @@ export default function Experience() {
       >
         Throughout my 15+ years of professional experience, I was fortunate to
         work in a diverse set industries including Healthcare, FinTech, and
-        Consumer Media measurement. In addition to my work experience, I hold
-        both a M.S. in Finance and a B.S. Electronic Engineering Tech degrees.
+        Consumer Media research. In addition to my work experience, I hold
+        both a M.S. in Finance and a B.S. in Electronic Engineering Tech degrees.
       </Typography>
       <List
         sx={{
