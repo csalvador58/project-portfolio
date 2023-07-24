@@ -7,7 +7,7 @@ export default function Hero() {
     <>
       <Box mt='5rem' display='flex' justifyContent='center' padding={5}>
         <Avatar
-          alt='Chris Salvador, MSF'
+          alt='Head profile of person wearing a black shirt'
           src={ProfilePic}
           sx={{ width: { xs: '60vw' }, height: 'auto', maxWidth: '300px' }}
         />

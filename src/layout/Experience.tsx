@@ -21,7 +21,7 @@ export default function Experience() {
       </Typography>
       <Typography
         fontWeight='light'
-        fontSize={{xs: '1rem', sm: '1.2rem', md: '1.5rem'}}
+        fontSize={{ xs: '1rem', sm: '1.2rem', md: '1.5rem' }}
         component='p'
         pb='2rem'
         paddingX={{ xs: '2rem', sm: '4rem', md: '6rem', xl: '8rem' }}
@@ -34,7 +34,7 @@ export default function Experience() {
       <List
         sx={{
           marginX: 'auto',
-          maxWidth: '75vw',
+          // maxWidth: '75vw',
           pb: '3rem',
           paddingX: { xs: '3rem', sm: '5rem', md: '7rem', xl: '10rem' },
         }}
@@ -45,17 +45,50 @@ export default function Experience() {
               textAlign: 'center',
             }}
             // align='center'
-            primary={`Field Service Engineer II • Medical Imaging Systems`}
+            primary={
+              <Box
+                display='flex'
+                flexDirection={{ xs: 'column', sm: 'row' }}
+                justifyContent='center'
+                alignItems='center'
+                sx={{ '& :not(:last-child)': { mr: { xs: 0, sm: 1 } } }}
+              >
+                <Typography
+                  sx={{
+                    whiteSpace: 'nowrap',
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                  }}
+                  component='p'
+                  fontSize={{ xs: '1rem' }}
+                  color={theme.palette.mode === 'dark' ? 'white' : 'black'}
+                >
+                  Field Service Engineer II,
+                </Typography>
+                <Typography
+                  sx={{
+                    whiteSpace: 'nowrap',
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                  }}
+                  component='p'
+                  fontSize={{ xs: '1rem' }}
+                  color={theme.palette.mode === 'dark' ? 'white' : 'black'}
+                >
+                  Medical Imaging Systems
+                </Typography>
+              </Box>
+            }
             secondary={
               <React.Fragment>
                 <Typography
-                  sx={{ display: 'inline' }}
+                  // sx={{ display: 'inline' }}
                   component='span'
                   variant='body2'
-                  color={'black'}
+                  color={theme.palette.mode === 'dark' ? 'white' : 'black'}
                 >
-                  GE HealthCare —
-                </Typography>
+                  GE HealthCare
+                </Typography>{' '}
                 <Link href='https://www.gehealthcare.com/' target='_blank'>
                   {' '}
                   www.gehealthcare.com
@@ -65,8 +98,7 @@ export default function Experience() {
           />
         </ListItem>
         <Divider
-          // sx={{maxWidth: { sm: '20rem', md: '20rem' }}}
-          variant='middle'
+          sx={{ maxWidth: { xs: '15rem', md: '20rem' }, marginX: 'auto' }}
           component='li'
           style={{
             backgroundColor: theme.palette.mode === 'dark' ? 'white' : 'black',
@@ -78,17 +110,40 @@ export default function Experience() {
               textAlign: 'center',
             }}
             // align='center'
-            primary='Sr Fund Accountant • Hedge Funds'
+            primary={
+              <Box
+                display='flex'
+                flexDirection={{ xs: 'column', sm: 'row' }}
+                justifyContent='center'
+                alignItems='center'
+                sx={{ '& :not(:last-child)': { mr: { xs: 0, sm: 1 } } }}
+              >
+                <Typography
+                  component='p'
+                  fontSize={{ xs: '1rem' }}
+                  color={theme.palette.mode === 'dark' ? 'white' : 'black'}
+                >
+                  Sr Fund Accountant,
+                </Typography>
+                <Typography
+                  component='p'
+                  fontSize={{ xs: '1rem' }}
+                  color={theme.palette.mode === 'dark' ? 'white' : 'black'}
+                >
+                  Hedge Funds
+                </Typography>
+              </Box>
+            }
             secondary={
               <React.Fragment>
                 <Typography
-                  sx={{ display: 'inline' }}
+                  // sx={{ display: 'inline' }}
                   component='span'
                   variant='body2'
                   color={theme.palette.mode === 'dark' ? 'white' : 'black'}
                 >
-                  SS&C ALPS —
-                </Typography>
+                  SS&C ALPS
+                </Typography>{' '}
                 <Link
                   href='https://www.ssctech.com/solutions/products-a-to-z/registered-fund-services'
                   target='_blank'
@@ -101,8 +156,7 @@ export default function Experience() {
           />
         </ListItem>
         <Divider
-          // sx={{maxWidth: { xs: '3rem', sm: '5rem', md: '7rem' }}}
-          variant='middle'
+          sx={{ maxWidth: { xs: '15rem', md: '20rem' }, marginX: 'auto' }}
           component='li'
           style={{
             backgroundColor: theme.palette.mode === 'dark' ? 'white' : 'black',
@@ -114,17 +168,40 @@ export default function Experience() {
               textAlign: 'center',
             }}
             // align='center'
-            primary='Quality Analyst • Field Operations'
+            primary={
+              <Box
+                display='flex'
+                flexDirection={{ xs: 'column', sm: 'row' }}
+                justifyContent='center'
+                alignItems='center'
+                sx={{ '& :not(:last-child)': { mr: { xs: 0, sm: 1 } } }}
+              >
+                <Typography
+                  component='p'
+                  fontSize={{ xs: '1rem' }}
+                  color={theme.palette.mode === 'dark' ? 'white' : 'black'}
+                >
+                  Quality Analyst,
+                </Typography>
+                <Typography
+                  component='p'
+                  fontSize={{ xs: '1rem' }}
+                  color={theme.palette.mode === 'dark' ? 'white' : 'black'}
+                >
+                  Field Operations
+                </Typography>
+              </Box>
+            }
             secondary={
               <React.Fragment>
                 <Typography
-                  sx={{ display: 'inline' }}
+                  // sx={{ display: 'inline' }}
                   component='span'
                   variant='body2'
                   color={theme.palette.mode === 'dark' ? 'white' : 'black'}
                 >
-                  Nielsen —
-                </Typography>
+                  Nielsen
+                </Typography>{' '}
                 <Link href='https://www.nielsen.com/' target='_blank'>
                   {' '}
                   www.nielsen.com
