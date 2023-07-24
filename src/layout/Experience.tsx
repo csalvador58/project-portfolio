@@ -48,10 +48,10 @@ export default function Experience() {
             primary={
               <Box
                 display='flex'
-                flexDirection={{ xs: 'column', sm: 'row' }}
+                flexDirection={{ xs: 'column', md: 'row' }}
                 justifyContent='center'
                 alignItems='center'
-                sx={{ '& :not(:last-child)': { mr: { xs: 0, sm: 1 } } }}
+                sx={{ '& :not(:last-child)': { mr: { xs: 0, md: 1 } } }}
               >
                 <Typography
                   sx={{
@@ -113,10 +113,10 @@ export default function Experience() {
             primary={
               <Box
                 display='flex'
-                flexDirection={{ xs: 'column', sm: 'row' }}
+                flexDirection={{ xs: 'column', md: 'row' }}
                 justifyContent='center'
                 alignItems='center'
-                sx={{ '& :not(:last-child)': { mr: { xs: 0, sm: 1 } } }}
+                sx={{ '& :not(:last-child)': { mr: { xs: 0, md: 1 } } }}
               >
                 <Typography
                   component='p'
@@ -171,10 +171,10 @@ export default function Experience() {
             primary={
               <Box
                 display='flex'
-                flexDirection={{ xs: 'column', sm: 'row' }}
+                flexDirection={{ xs: 'column', md: 'row' }}
                 justifyContent='center'
                 alignItems='center'
-                sx={{ '& :not(:last-child)': { mr: { xs: 0, sm: 1 } } }}
+                sx={{ '& :not(:last-child)': { mr: { xs: 0, md: 1 } } }}
               >
                 <Typography
                   component='p'
