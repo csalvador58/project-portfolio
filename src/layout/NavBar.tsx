@@ -11,19 +11,18 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 interface NavBarProps {
   handleAboutClick: () => void;
-  handleProjectsClick: () => void;
   handleExperienceClick: () => void;
   handleContactClick: () => void;
 }
 
 const Navbar: FC<NavBarProps> = ({
   handleAboutClick,
-  // handleProjectsClick,
   handleExperienceClick,
   handleContactClick,
 }) => {
   const [anchorEl, setAnchorEl] = useState<SVGSVGElement | null>(null);
   const isMenuOpen = Boolean(anchorEl);
+
   const handleProfileMenuOpen = (event: MouseEvent<SVGSVGElement>) => {
     setAnchorEl(event.currentTarget);
   };
@@ -50,7 +49,6 @@ const Navbar: FC<NavBarProps> = ({
       onClose={handleMenuClose}
     >
       <MenuItem onClick={handleAboutClick}>About</MenuItem>
-      {/* <MenuItem onClick={handleProjectsClick}>Projects</MenuItem> */}
       <MenuItem onClick={handleExperienceClick}>Experience</MenuItem>
       <MenuItem onClick={handleContactClick}>Contact</MenuItem>
     </Menu>
@@ -61,18 +59,17 @@ const Navbar: FC<NavBarProps> = ({
       <AppBar
         color='transparent'
         position='fixed'
-        sx={{ backdropFilter: 'blur(10px)'}}
+        sx={{ backdropFilter: 'blur(10px)' }}
       >
         <Toolbar>
           <Typography
             paddingLeft={2}
-            // variant='h8'
             component='div'
-            sx={{ 
+            sx={{
               flexGrow: 1,
-              fontSize: "1.5rem", // Custom font size for "h8"
-              fontWeight: "bold", // Custom font weight for "h8"
-              marginLeft:"12px" 
+              fontSize: '1.5rem', // Custom font size for "h8"
+              fontWeight: 'bold', // Custom font weight for "h8"
+              marginLeft: '12px',
             }}
           >
             SALVADOR

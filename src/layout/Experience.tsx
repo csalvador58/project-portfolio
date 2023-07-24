@@ -7,9 +7,11 @@ import {
   ListItem,
   ListItemText,
   Typography,
+  useMediaQuery,
 } from '@mui/material';
 
 export default function Experience() {
+  const userTheme = useMediaQuery('(prefers-color-scheme: dark)');
   return (
     <Box textAlign={{ xl: 'center' }}>
       <Typography variant='h6' component='h6' align='center' padding='3rem 0'>
@@ -22,16 +24,10 @@ export default function Experience() {
         pb='2rem'
         paddingX={{ xs: '2rem', sm: '4rem', md: '6rem', xl: '8rem' }}
       >
-       In June 2023, I recently completed my
-        Javascript Full-Stack developer certificate from{' '}
-        <a href='https://www.pce.uw.edu/' target='_blank'>
-          University of Washington - PCE
-        </a>
-        .  Throughout my 15+ years of working experience, I was fortunate to make
-        contributions in diverse industries, including Healthcare, FinTech, and
+        Throughout my 15+ years of professional experience, I was fortunate to
+        work in a diverse set industries including Healthcare, FinTech, and
         Consumer Media measurement. In addition to my work experience, I hold
-        both a M.S. in Finance and a B.S. Electronic Engineering Tech degrees,
-        reflecting my passion for continuos learning.
+        both a M.S. in Finance and a B.S. Electronic Engineering Tech degrees.
       </Typography>
       <List
         sx={{
@@ -54,7 +50,7 @@ export default function Experience() {
                   sx={{ display: 'inline' }}
                   component='span'
                   variant='body2'
-                  color='text.primary'
+                  color={userTheme ? 'white' : 'black'}
                 >
                   GE HealthCare —
                 </Typography>
@@ -66,7 +62,7 @@ export default function Experience() {
             }
           />
         </ListItem>
-        <Divider variant='middle' component='li' />
+        <Divider variant='middle' component='li' style={{ backgroundColor: userTheme ? 'white' : 'black' }}/>
         <ListItem>
           <ListItemText
             sx={{
@@ -80,7 +76,7 @@ export default function Experience() {
                   sx={{ display: 'inline' }}
                   component='span'
                   variant='body2'
-                  color='text.primary'
+                  color={userTheme ? 'white' : 'black'}
                 >
                   SS&C ALPS —
                 </Typography>
@@ -95,7 +91,7 @@ export default function Experience() {
             }
           />
         </ListItem>
-        <Divider variant='middle' component='li' />
+        <Divider variant='middle' component='li' style={{ backgroundColor: userTheme ? 'white' : 'black' }}/>
         <ListItem>
           <ListItemText
             sx={{
@@ -109,7 +105,7 @@ export default function Experience() {
                   sx={{ display: 'inline' }}
                   component='span'
                   variant='body2'
-                  color='text.primary'
+                  color={userTheme ? 'white' : 'black'}
                 >
                   Nielsen —
                 </Typography>
