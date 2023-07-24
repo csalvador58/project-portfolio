@@ -1,8 +1,7 @@
-import * as React from 'react';
 import { AppBar, Box, Toolbar, Typography } from '@mui/material';
 import NavTabs from './NavTabs';
 
-export default function NavBar(props) {
+export default function NavBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position='fixed' color="transparent" sx={{backdropFilter:"blur(20px)"}}>
