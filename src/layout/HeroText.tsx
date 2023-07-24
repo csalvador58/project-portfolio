@@ -6,7 +6,7 @@ export default function HeroText() {
       <Typography
         textAlign={{ xl: 'center' }}
         fontWeight='light'
-        variant='h6'
+        fontSize={{xs: '1rem', sm: '1.5rem'}}
         color='white'
         component='p'
         padding={{ xs: '2rem', sm: '4rem', md: '6rem' }}

@@ -19,7 +19,7 @@ export default function Experience() {
       </Typography>
       <Typography
         fontWeight='light'
-        variant='body1'
+        fontSize={{xs: '1rem', sm: '1.5rem'}}
         component='p'
         pb='2rem'
         paddingX={{ xs: '2rem', sm: '4rem', md: '6rem', xl: '8rem' }}
