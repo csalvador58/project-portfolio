@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 import {
   Button,
   Card,
@@ -7,22 +7,33 @@ import {
   CardMedia,
   Typography,
 } from '@mui/material/';
-import project01Img from '../projects/odinLandingPage/projectImages/project01Preview.png';
 
-export default function ProjectCard({
-  image,
+interface ProjectCardProps {
+  image: string;
+  imageAlt: string;
+  title: string;
+  name: string;
+  description: string;
+  url: string;
+}
+
+const ProjectCard: FC<ProjectCardProps> = ({
   imageAlt,
-  title,
   name,
   description,
   url,
-}) {
+}) => {
   return (
-    <Card
-      style={{ border: '1px solid white' }}
-      sx={({ maxWidth: 345 }, { background: 'black' })}
-    >
-      <CardMedia sx={{ height: '100%', objectFit: 'contain'}} component='img' image={project01Img} title={imageAlt} />
+    <Card style={{ border: '1px solid white' }} sx={{ background: 'black' }}>
+      <CardMedia
+        sx={{ height: '100%', objectFit: 'contain' }}
+        component='img'
+        image={new URL(
+          '../projects/odinLandingPage/projectImages/project01Preview.png',
+          import.meta.url
+        ).toString()}
+        title={imageAlt}
+      />
       <CardContent>
         <Typography
           gutterBottom
@@ -44,4 +55,6 @@ export default function ProjectCard({
       </CardActions>
     </Card>
   );
-}
+};
+
+export default ProjectCard;

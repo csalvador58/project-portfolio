@@ -1,10 +1,10 @@
-import React from 'react';
 import { Grid, Paper, Typography } from '@mui/material';
 import ProjectCard from '../components/ProjectCard';
 import projects from '../projects/projects.json';
+import { Project } from '../types/project';
 
 export default function Projects() {
-  const portfolioProjects = projects.map((project) => {
+  const portfolioProjects = projects.map((project: Project) => {
     return (
       <Grid item key={project.id} xs={12} sm={6} md={4} lg={4} xl={3}>
         <ProjectCard

@@ -8,7 +8,7 @@ import {
 import Hero from './layout/Hero';
 import NavBar from './layout/NavBar';
 import HeroText from './layout/HeroText';
-import Projects from './layout/Projects';
+// import Projects from './layout/Projects';
 import Experience from './layout/Experience';
 import Contacts from './layout/Contacts';
 import RefMarker from './components/RefMarker';
@@ -68,10 +68,10 @@ const App = () => {
           <Hero />
           <HeroText />
         </Grid>
-        <Grid item>
+        {/* <Grid item>
           <RefMarker reference={projectsRef} />
           <Projects />
-        </Grid>
+        </Grid> */}
         <Grid item>
           <RefMarker reference={experienceRef} />
           <Experience />

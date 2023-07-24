@@ -22,19 +22,16 @@ export default function Experience() {
         pb='2rem'
         paddingX={{ xs: '2rem', sm: '4rem', md: '6rem', xl: '8rem' }}
       >
-        In 2022, I decided to a pursue a passion that I've long kept inside
-        since programming 68HC11 micro-controllers in C over a decade ago. My
-        passion to develop software allows me to express my creativity and allow
-        my curiosity to wander while building fun applications. I've taken the
-        self-taught learning path and joined many Web2 and Web3 communities. I'm
-        also enrolled at a Javascript Full-stack developer program locally in my
-        area.
-        <br />
-        <br />
-        In the 15+ years of my working career, I was fortunate to contribute in
-        various industries that included Healthcare, FinTech, and Media
-        measurement. As a lifelong learner, my trainings also include a M.S.
-        Finance and a B.S. Electronic Engineering Tech degrees.
+       In June 2023, I recently completed my
+        Javascript Full-Stack developer certificate from{' '}
+        <a href='https://www.pce.uw.edu/' target='_blank'>
+          University of Washington - PCE
+        </a>
+        .  Throughout my 15+ years of working experience, I was fortunate to make
+        contributions in diverse industries, including Healthcare, FinTech, and
+        Consumer Media measurement. In addition to my work experience, I hold
+        both a M.S. in Finance and a B.S. Electronic Engineering Tech degrees,
+        reflecting my passion for continuos learning.
       </Typography>
       <List
         sx={{
@@ -50,7 +47,7 @@ export default function Experience() {
               textAlign: 'center',
             }}
             // align='center'
-            primary='Field Engineer II - Medical Imaging Systems'
+            primary='Field Service Engineer - Medical Imaging Systems'
             secondary={
               <React.Fragment>
                 <Typography

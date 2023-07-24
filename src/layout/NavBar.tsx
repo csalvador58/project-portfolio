@@ -18,7 +18,7 @@ interface NavBarProps {
 
 const Navbar: FC<NavBarProps> = ({
   handleAboutClick,
-  handleProjectsClick,
+  // handleProjectsClick,
   handleExperienceClick,
   handleContactClick,
 }) => {
@@ -50,7 +50,7 @@ const Navbar: FC<NavBarProps> = ({
       onClose={handleMenuClose}
     >
       <MenuItem onClick={handleAboutClick}>About</MenuItem>
-      <MenuItem onClick={handleProjectsClick}>Projects</MenuItem>
+      {/* <MenuItem onClick={handleProjectsClick}>Projects</MenuItem> */}
       <MenuItem onClick={handleExperienceClick}>Experience</MenuItem>
       <MenuItem onClick={handleContactClick}>Contact</MenuItem>
     </Menu>
@@ -61,7 +61,6 @@ const Navbar: FC<NavBarProps> = ({
       <AppBar
         color='transparent'
         position='fixed'
-        
         sx={{ backdropFilter: 'blur(10px)'}}
       >
         <Toolbar>
@@ -71,26 +70,13 @@ const Navbar: FC<NavBarProps> = ({
             component='div'
             sx={{ 
               flexGrow: 1,
-              fontSize: "2rem", // Custom font size for "h8"
-              fontWeight: "bold", // Custom font weight for "h8" 
+              fontSize: "1.5rem", // Custom font size for "h8"
+              fontWeight: "bold", // Custom font weight for "h8"
+              marginLeft:"12px" 
             }}
           >
             SALVADOR
           </Typography>
-          {/* <IconButton
-            aria-label='menu'
-            color='inherit'
-            edge='start'
-            size='large'
-            sx={{ mr: 2 }}
-            id='menu-button'
-            aria-controls={open ? 'basic-menu' : undefined}
-            aria-haspopup='true'
-            aria-expanded={open ? 'true' : undefined}
-            onClick={handleClick}
-          >
-            <MenuIcon />
-          </IconButton> */}
           <MenuIcon onClick={handleProfileMenuOpen} />
           {renderMenu}
         </Toolbar>
