@@ -1,12 +1,19 @@
 import { useRef } from 'react';
 import './App.css';
-import { Grid } from '@mui/material';
+import { Grid, ThemeProvider, createTheme } from '@mui/material';
+import CssBaseline from '@mui/material/CssBaseline';
 import Hero from './layout/Hero';
 import NavBar from './layout/NavBar';
 import HeroText from './layout/HeroText';
 import Experience from './layout/Experience';
 import Contacts from './layout/Contacts';
 import RefMarker from './components/RefMarker';
+
+const theme = createTheme({
+  palette: {
+    mode: 'light',
+  },
+});
 
 const App = () => {
   const aboutRef = useRef<HTMLSpanElement>(null);
@@ -30,30 +37,32 @@ const App = () => {
   };
 
   return (
-    <>
-      <Grid container direction='column'>
-        <Grid item>
-          <NavBar
-            handleAboutClick={handleAboutClick}
-            handleExperienceClick={handleExperienceClick}
-            handleContactClick={handleContactClick}
-          />
+    <ThemeProvider theme={theme}>
+      <CssBaseline>
+        <Grid container direction='column'>
+          <Grid item>
+            <NavBar
+              handleAboutClick={handleAboutClick}
+              handleExperienceClick={handleExperienceClick}
+              handleContactClick={handleContactClick}
+            />
+          </Grid>
+          <Grid item>
+            <RefMarker reference={aboutRef} />
+            <Hero />
+            <HeroText />
+          </Grid>
+          <Grid item>
+            <RefMarker reference={experienceRef} />
+            <Experience />
+          </Grid>
+          <Grid item>
+            <RefMarker reference={contactRef} />
+            <Contacts />
+          </Grid>
         </Grid>
-        <Grid item>
-          <RefMarker reference={aboutRef} />
-          <Hero />
-          <HeroText />
-        </Grid>
-        <Grid item>
-          <RefMarker reference={experienceRef} />
-          <Experience />
-        </Grid>
-        <Grid item>
-          <RefMarker reference={contactRef} />
-          <Contacts />
-        </Grid>
-      </Grid>
-    </>
+      </CssBaseline>
+    </ThemeProvider>
   );
 };
 

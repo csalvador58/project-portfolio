@@ -7,11 +7,13 @@ import {
   ListItem,
   ListItemText,
   Typography,
-  useMediaQuery,
+  // useMediaQuery,
 } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 
 export default function Experience() {
-  const userTheme = useMediaQuery('(prefers-color-scheme: dark)');
+  // const userTheme = useMediaQuery('(prefers-color-scheme: dark)');
+  const theme = useTheme();
   return (
     <Box textAlign={{ xl: 'center' }}>
       <Typography variant='h6' component='h6' align='center' padding='3rem 0'>
@@ -19,7 +21,7 @@ export default function Experience() {
       </Typography>
       <Typography
         fontWeight='light'
-        fontSize={{xs: '1rem', sm: '1.5rem'}}
+        fontSize={{xs: '1rem', sm: '1.2rem', md: '1.5rem'}}
         component='p'
         pb='2rem'
         paddingX={{ xs: '2rem', sm: '4rem', md: '6rem', xl: '8rem' }}
@@ -32,7 +34,7 @@ export default function Experience() {
       <List
         sx={{
           marginX: 'auto',
-          maxWidth: '480px',
+          maxWidth: '75vw',
           pb: '3rem',
           paddingX: { xs: '3rem', sm: '5rem', md: '7rem', xl: '10rem' },
         }}
@@ -43,14 +45,14 @@ export default function Experience() {
               textAlign: 'center',
             }}
             // align='center'
-            primary='Field Service Engineer - Medical Imaging Systems'
+            primary={`Field Service Engineer II • Medical Imaging Systems`}
             secondary={
               <React.Fragment>
                 <Typography
                   sx={{ display: 'inline' }}
                   component='span'
                   variant='body2'
-                  color={userTheme ? 'white' : 'black'}
+                  color={'black'}
                 >
                   GE HealthCare —
                 </Typography>
@@ -62,21 +64,28 @@ export default function Experience() {
             }
           />
         </ListItem>
-        <Divider variant='middle' component='li' style={{ backgroundColor: userTheme ? 'white' : 'black' }}/>
+        <Divider
+          // sx={{maxWidth: { sm: '20rem', md: '20rem' }}}
+          variant='middle'
+          component='li'
+          style={{
+            backgroundColor: theme.palette.mode === 'dark' ? 'white' : 'black',
+          }}
+        />
         <ListItem>
           <ListItemText
             sx={{
               textAlign: 'center',
             }}
             // align='center'
-            primary='Sr Fund Accountant - Hedge Funds'
+            primary='Sr Fund Accountant • Hedge Funds'
             secondary={
               <React.Fragment>
                 <Typography
                   sx={{ display: 'inline' }}
                   component='span'
                   variant='body2'
-                  color={userTheme ? 'white' : 'black'}
+                  color={theme.palette.mode === 'dark' ? 'white' : 'black'}
                 >
                   SS&C ALPS —
                 </Typography>
@@ -91,21 +100,28 @@ export default function Experience() {
             }
           />
         </ListItem>
-        <Divider variant='middle' component='li' style={{ backgroundColor: userTheme ? 'white' : 'black' }}/>
+        <Divider
+          // sx={{maxWidth: { xs: '3rem', sm: '5rem', md: '7rem' }}}
+          variant='middle'
+          component='li'
+          style={{
+            backgroundColor: theme.palette.mode === 'dark' ? 'white' : 'black',
+          }}
+        />
         <ListItem>
           <ListItemText
             sx={{
               textAlign: 'center',
             }}
             // align='center'
-            primary='Quality Analyst - Field Operations'
+            primary='Quality Analyst • Field Operations'
             secondary={
               <React.Fragment>
                 <Typography
                   sx={{ display: 'inline' }}
                   component='span'
                   variant='body2'
-                  color={userTheme ? 'white' : 'black'}
+                  color={theme.palette.mode === 'dark' ? 'white' : 'black'}
                 >
                   Nielsen —
                 </Typography>

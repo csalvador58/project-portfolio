@@ -6,7 +6,7 @@ export default function HeroText() {
       <Typography
         textAlign={{ xl: 'center' }}
         fontWeight='light'
-        fontSize={{xs: '1rem', sm: '1.5rem'}}
+        fontSize={{xs: '1rem', sm: '1.2rem', md: '1.5rem'}}
         color='white'
         component='p'
         padding={{ xs: '2rem', sm: '4rem', md: '6rem' }}
@@ -16,11 +16,11 @@ export default function HeroText() {
         Web3 played a major inspiration as I found the blockchain and
         cryptography to be fascinating emerging technologies. In my dev journey,
         I embraced the path of self-taught developers as well as learning from
-        the many Web2 and Web3 communities. In June 2023, I completed my
+        many Web2 and Web3 communities. In June 2023, I completed my
         Full-Stack Developer certificate from{' '}
         <a href='https://www.pce.uw.edu/' target='_blank'>
           University of Washington - PCE
-        </a>
+        </a>.
         <br />
         <br />
         If I'm not outdoors hiking{' '}
@@ -34,7 +34,7 @@ export default function HeroText() {
         , you can find me actively building with the Web3 communities like
         Alchemy, Encode, and ETHGlobal. While I have a strong preference for
         backend and databases, I also enjoy working on the frontend. Currently
-        I've been inspired by Zero-Knowledge proofs and the possible uses in
+        I've been studying by Zero-Knowledge proofs and the possible uses in
         Healthcare. Feel free to connect with me if you're along the same dev
         journey or interests.
       </Typography>
