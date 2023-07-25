@@ -29,7 +29,7 @@ const App = () => {
   const handleExperienceClick = () => {
     const offset = experienceRef.current?.offsetTop;
     // console.log(offset)
-    window.scroll({ top: (offset ?? 0) + 15, left: 0, behavior: 'smooth' });
+    window.scroll({ top: (offset ?? 0) - 15, left: 0, behavior: 'smooth' });
   };
   const handleContactClick = () => {
     const offset = contactRef.current?.offsetTop;
