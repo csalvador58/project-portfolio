@@ -26,10 +26,11 @@ export default function Experience() {
         pb='2rem'
         paddingX={{ xs: '2rem', sm: '4rem', md: '6rem', xl: '8rem' }}
       >
-        Throughout my 15+ years of professional experience, I was fortunate to
-        work in a diverse set of industries including Healthcare, FinTech, and
-        Consumer Media research. In addition to my work experience, I hold
-        both a M.S. in Finance and a B.S. in Electronic Engineering Tech degrees.
+        I have 15 years of professional experience in a wide range of customer
+        and client servicing roles. I worked in a diverse set of
+        industries including Healthcare, Hedge Fund Administration, and Consumer Media research.
+        Additionally, I hold both a M.S. in Finance and a B.S. in Electronic
+        Engineering Technology degrees.
       </Typography>
       <List
         sx={{
@@ -181,7 +182,7 @@ export default function Experience() {
                   fontSize={{ xs: '1rem' }}
                   color={theme.palette.mode === 'dark' ? 'white' : 'black'}
                 >
-                  Quality Analyst,
+                  Quality Analyst / Market Coordinator / Sr Field Tech,
                 </Typography>
                 <Typography
                   component='p'

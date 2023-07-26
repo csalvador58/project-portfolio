@@ -6,21 +6,22 @@ export default function HeroText() {
       <Typography
         textAlign={{ xl: 'center' }}
         fontWeight='light'
-        fontSize={{xs: '1rem', sm: '1.2rem', md: '1.5rem'}}
+        fontSize={{ xs: '1rem', sm: '1.2rem', md: '1.5rem' }}
         color='white'
         component='p'
         padding={{ xs: '2rem', sm: '4rem', md: '6rem' }}
       >
-        In 2022, I finally decided to pursue a long-held passion for coding that
+        In 2022, I decided to pursue a long-held passion for coding that
         originated during a time I learned to program 68HC11 micro-controllers.
-        Web3 played a major inspiration as I found blockchain and
-        cryptography to be fascinating emerging technologies. In my dev journey,
-        I embraced the path of self-taught developers as well as learning from
-        many Web2 and Web3 communities. In June 2023, I completed my
-        Full-Stack Developer certificate from{' '}
+        I was inspired by Web3 as I found blockchain and cryptography to be
+        fascinating emerging technologies. In my dev journey, I embraced the
+        path of self-taught developers as well as learning from many Web2 and
+        Web3 communities. In June 2023, I completed my Full-Stack Developer
+        certificate from{' '}
         <a href='https://www.pce.uw.edu/' target='_blank'>
           University of Washington - PCE
-        </a>.
+        </a>
+        .
         <br />
         <br />
         If I'm not outdoors hiking{' '}

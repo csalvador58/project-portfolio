@@ -31,6 +31,11 @@ const Navbar: FC<NavBarProps> = ({
     // handleMobileMenuClose();
   };
 
+  const onClickHandler = (cb: () => void) => {
+    setAnchorEl(null);
+    cb();
+  }
+
   const menuId = 'primary-menu';
   const renderMenu = (
     <Menu
@@ -48,9 +53,9 @@ const Navbar: FC<NavBarProps> = ({
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleAboutClick}>About</MenuItem>
-      <MenuItem onClick={handleExperienceClick}>Experience</MenuItem>
-      <MenuItem onClick={handleContactClick}>Contact</MenuItem>
+      <MenuItem onClick={() => onClickHandler(handleAboutClick)}>About</MenuItem>
+      <MenuItem onClick={() => onClickHandler(handleExperienceClick)}>Experience</MenuItem>
+      <MenuItem onClick={() => onClickHandler(handleContactClick)}>Contact</MenuItem>
     </Menu>
   );
 
