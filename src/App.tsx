@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import './App.css';
 import { Grid, ThemeProvider, createTheme } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -8,6 +8,7 @@ import HeroText from './layout/HeroText';
 import Experience from './layout/Experience';
 import Contacts from './layout/Contacts';
 import RefMarker from './components/RefMarker';
+import Lenis from '@studio-freight/lenis';
 
 const theme = createTheme({
   palette: {
@@ -35,6 +36,18 @@ const App = () => {
     const offset = contactRef.current?.offsetTop;
     window.scroll({ top: offset, left: 0, behavior: 'smooth' });
   };
+
+  useEffect(() => {
+    // scrollYProgress.on("change", (e) => console.log("index y: ", e));
+    const lenis = new Lenis();
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
 
   return (
     <ThemeProvider theme={theme}>
